@@ -1,0 +1,35 @@
+body{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+p{
+	padding: 10px 0 0;
+}
+img#paginastic_logo{
+	display:block;
+	margin: 10% auto -27px;
+}
+#demo_paginastic{
+	height: auto;
+	margin: auto;
+	padding: 30px 20px;
+	width: 500px;
+}
+#paginastic_container{
+	margin-bottom: 20px;
+}
+#paginastic_navigation{
+	clear: both;
+	text-align: center;
+}
+#paginastic_navigation a{
+	border: 1px solid #1085DC;
+	color: #1085DC;
+	margin:2px;	
+	padding:3px;
+	text-align: center;
+	text-decoration:none
+}
+.active_page{
+	background: #0DA3D5;
+	color: white !important;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<title>Paginastic Pagination</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/paginastic.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/paginastic.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var elements = {
+		container: 			"paginastic_container",		//Set container element ID
+		current_page: 		"paginastic_current_page",	//Set input hidden element ID to handle which is the current page
+		class_active_page: 	"active_page",				//Set active page class, do not change this
+		show_per_page_id:	"paginastic_show_per_page",	//Set input hidden element ID to handle how much items per page
+		show_per_page:		5,							//Set how much items you want to paginate per page
+		page_navigation:	"paginastic_navigation",	//Set navigation element ID to show numbers of pages with link
+	}
+	
+	Paginastic.Pagination.init( elements );//Start the paginastic
+	
+});
+</script>
+</head>
+<body>
+	
+	<img src="images/paginastic.png" width="281" height="62" title="Paginastic JS" alt="Paginastic JS" id="paginastic_logo" />
+    <div id="demo_paginastic">
+        <input type="hidden" id="paginastic_current_page" /><!-- current page element ID -->
+        <input type="hidden" id="paginastic_show_per_page" /><!-- numbers of the items per page element ID -->        
+        <div id="paginastic_container"><!-- container element ID -->
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  1.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  2.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  3.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  4.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  5.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  6.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  7.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  8.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  9.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  10.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  11.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  12.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  13.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  14.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  15.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  16.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  17.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  18.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  19.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  20.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  21.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  22.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  23.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  24.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  25.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  26.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  27.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  28.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  29.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  30.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  31.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  32.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  33.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  34.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  35.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  36.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  37.</p>
+            <p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  38.</p>
+			<p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  39.</p>
+			<p>Lorem ipsum dolor paragraph, lorem ipsum is dolor an ipsum,  40.</p>
+        </div>
+        <div id="paginastic_navigation"></div><!-- navigation element -->    
+    </div>
+    
+    <a class="github-ribbon" href="https://github.com/viniciusdsantos/javascript">
+    	<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+    </a>
+    
+</body>
+</html>

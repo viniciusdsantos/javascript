@@ -1,0 +1,30 @@
+body{
+	height: 100%;
+}
+#main{
+	height: 100%;
+	position: relative;
+	text-align: center;
+	top: 30%;
+	vertical-align: middle;
+	width: 100%;
+	white-space: nowrap;
+}
+#chrono{
+	background-color: white;
+	border-style: double double double double;
+	border-width: 1px 1px 1px 1px;
+	font-family: "Courier New";
+	font-size: 1.65em;
+	margin: 0;
+	padding: 0.2em;
+	text-align: center;
+	width: 8em;
+}
+input{
+	margin-left: 2px;
+	font-size: 1.1em;
+	padding: 0.4em;
+	vertical-align: middle;
+	width: auto;
+}
