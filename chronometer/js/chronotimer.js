@@ -33,6 +33,8 @@ ChronoTimer.Time = new function(){ // ChronoTimer Class
 	this.current_minute			= 0;
 	this.current_second			= 0;
 	this.current_millisecond 	= 0;
+	this.total_ms				= 0;
+	this.prev_epoch				= (new Date).getTime();
 	this.stop_initial 			= false;
 	this.input_time_selector	= "chrono";
 	this.start_button_selector	= "start_button";
@@ -41,19 +43,15 @@ ChronoTimer.Time = new function(){ // ChronoTimer Class
 	
 	this.chronoStart = function(){ // This method start and control the timer
 		if( ChronoTimer.Time.stop_initial ){
-			ChronoTimer.Time.current_millisecond += 1;
-			if ( ChronoTimer.Time.current_millisecond == 10 ){
-				ChronoTimer.Time.current_millisecond = 0;
-				ChronoTimer.Time.current_second += 1;
-			}
-			if ( ChronoTimer.Time.current_second == 60 ){
-				ChronoTimer.Time.current_second = 0;
-				ChronoTimer.Time.current_minute += 1;
-			}
-			if ( ChronoTimer.Time.current_minute == 60 ){
-				ChronoTimer.Time.current_minute = 0;
-				ChronoTimer.Time.current_time += 1;
-			}
+			var now = (new Date).getTime();
+			ChronoTimer.Time.total_ms  += now - ChronoTimer.Time.prev_epoch;
+			ChronoTimer.Time.prev_epoch = now;
+
+			var total_segs = Math.round( ChronoTimer.Time.total_ms/1000 );
+			var total_mins = total_segs / 60;
+			ChronoTimer.Time.current_second = Math.round( total_segs % 60 );
+			ChronoTimer.Time.current_minute = Math.floor( total_mins % 60 );
+			ChronoTimer.Time.current_time   = Math.floor( total_mins / 60 );
 			
 			string_hour			= "" + ChronoTimer.Time.current_time;
 			string_minute		= "" + ChronoTimer.Time.current_minute;
@@ -62,12 +60,10 @@ ChronoTimer.Time = new function(){ // ChronoTimer Class
 	
 			if (string_hour.length != 2){
 				string_hour = "0" + ChronoTimer.Time.current_time;
-			}
-	
+			}	
 			if (string_minute.length != 2){
 				string_minute = "0" + ChronoTimer.Time.current_minute;
-			}
-	
+			}	
 			if (string_second.length != 2){
 				string_second = "0" + ChronoTimer.Time.current_second;
 			}
